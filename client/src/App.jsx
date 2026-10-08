@@ -10,7 +10,13 @@
 //
 // Tarefa 1: substitui este array vazio pelo array cards do teu server
 // (o que fizeste na aula 2).
-const cards = [];
+const cards = [
+  { name: "Cristiano Ronaldo", type: "Atacante", attack: 10, defense: 3 },
+  { name: "Lionel Messi", type: "Atacante", attack: 9, defense: 3 },
+  { name: "De Bruyne", type: "Médio", attack: 8, defense: 5 },
+  { name: "Sergio Ramos", type: "Defesa", attack: 4, defense: 10 },
+  { name: "Neuer", type: "Guarda-Redes", attack: 1, defense: 10 },
+];
 
 function App() {
   return (
