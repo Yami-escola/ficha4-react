@@ -1,14 +1,5 @@
-// PONTO DE PARTIDA DA AULA 4
-//
-// É exatamente onde o professor acabou o live coding do Bloco 1:
-// uma app React criada com o Vite, já sem o código de exemplo.
-//
-// Para pôr a correr (dentro da pasta client/ do teu repo):
-//     npm install
-//     npm run dev
-// e abrir http://localhost:5173
-//
-// Tarefa 1: substitui este array vazio pelo array cards do teu server
+import Card from "./Card";
+
 // (o que fizeste na aula 2).
 const cards = [
   { name: "Cristiano Ronaldo", type: "Atacante", attack: 10, defense: 3 },
@@ -22,6 +13,20 @@ function App() {
   return (
     <main>
       <h1>A minha coleção</h1>
+      <div className="cards">
+        {cards.map((card) => {
+            return (
+              <Card
+                key={card.name}
+                name={card.name}
+                type={card.type}
+                attack={card.attack}
+                defense={card.defense}
+              />
+            );
+        })}
+      </div>
+
     </main>
   );
 }
